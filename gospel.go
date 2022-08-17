@@ -13,7 +13,7 @@ func Test() {
 	fmt.Println(file.Name())
 }
 
-func Initial() {
+func InitSys() {
 	f, err := os.CreateTemp("", "sample.*.yaml")
 	if err != nil {
 		panic(err)
