@@ -2,21 +2,20 @@ package gospel
 
 import (
 	"fmt"
-	"os"
 )
 
 var (
-	file *os.File
+	states map[string]any
 )
 
 func Test() {
-	fmt.Println(file.Name())
+	fmt.Println("Hello World")
 }
 
-func InitSys() {
-	f, err := os.CreateTemp("", "sample.*.yaml")
-	if err != nil {
-		panic(err)
-	}
-	file = f
+func SetState(_name string, _value any) {
+	states[_name] = _value
+}
+
+func GetState(_name string) any {
+	return states[_name]
 }
