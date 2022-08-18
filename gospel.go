@@ -5,7 +5,7 @@ import (
 )
 
 var (
-	states map[string]any
+	states = make(map[string]any)
 )
 
 func Test() {
